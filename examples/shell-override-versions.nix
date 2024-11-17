@@ -2,7 +2,7 @@
 
 let
   nixpkgs-esp-dev = builtins.fetchGit {
-    url = "https://github.com/mirrexagon/nixpkgs-esp-dev.git";
+    url = "https://github.com/RJRP44/nixpkgs-esp-dev.git";
   };
 
   pkgs = import <nixpkgs> { overlays = [ (import "${nixpkgs-esp-dev}/overlay.nix") ]; };
@@ -12,8 +12,8 @@ pkgs.mkShell {
 
   buildInputs = with pkgs; [
     (esp-idf-esp32.override {
-      rev = "cf7e743a9b2e5fd2520be4ad047c8584188d54da";
-      sha256 = "sha256-tqWUTJlOWk4ayfQIxgiLkTrrTFU0ZXuh76xEZWKRZ/s=";
+      rev = "64b9d85a766f182c571fd1f515ce127dfcdc9a46";
+      sha256 = "sha256-ooHjHcD8N0nJMa9mfF3SOkM8ddwbwptOitl1IBiExdw=";
     })
   ];
 }
