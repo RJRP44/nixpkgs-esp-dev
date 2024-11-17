@@ -74,6 +74,7 @@ let
           esp-idf-panic-decoder
           pyclang
           argcomplete
+          psutil
 
           freertos_gdb
 

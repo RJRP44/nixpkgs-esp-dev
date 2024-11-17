@@ -290,5 +290,24 @@ rec {
     };
   };
 
+  psutil = buildPythonPackage rec {
+    pname = "psutil";
+    version = "6.1.0";
+
+    src = fetchPypi {
+      inherit pname version;
+      hash = "sha256-NTgV9Zp/ZM2socAwfuE1WKBRL22wZOkv6DN4TwhTnHo=";
+    };
+
+    doCheck = false;
+
+    propagatedBuildInputs = [
+    ];
+
+    meta = {
+      homepage = "https://github.com/giampaolo/psutil";
+    };
+  };
+
 }
 
